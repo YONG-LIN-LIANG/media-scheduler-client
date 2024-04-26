@@ -26,8 +26,18 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* The @layer directive helps you control declaration order by automatically relocating your styles to the corresponding @tailwind directive, and also enables features like modifiers and tree-shaking for your own custom CSS. */
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .absolute-center {
+    @apply absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4;
   }
 }
